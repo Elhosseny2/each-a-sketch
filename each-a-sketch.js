@@ -1,23 +1,20 @@
 let container = document.querySelector("#container");
 
-function makeRow(row, ) {
-  for (i = 0; i < (row * 16); i++) {
-    let row = document.createElement("div");
-    // let culms = document.createElement("div");
-    container.appendChild(row).className = "row"
-    // container.appendChild(culms).className = "culms"
-    row.textContent="row"
-    // culms.textContent="culms"
+function makeGrid(row, culms) {
+  for (let i = 0; i < row * culms; i++) {
+    let grid = document.createElement("div");
+    container.appendChild(grid).className = "grid";
+    grid.textContent = "";
   }
 }
-makeRow(2);
+makeGrid(16, 16);
 
 // function makeCulms(culms ) {
 //     for (i = 0; i < (culms * 16); i++) {
 //       let culms = document.createElement("div");
 //     //   let culms = document.createElement("div");
 //       container.appendChild(culms).className = "culms"
-//       culms.textContent="culms"
+//       culms.textContent=""
 //     }
 //   }
 //   makeCulms(1);

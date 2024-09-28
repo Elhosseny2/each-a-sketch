@@ -1,22 +1,22 @@
 body {
-background-color: bisque;
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-.row {
-border: black solid 1px;
-background-color: red;
-display: flex;
-height: 20px;
-width:20px;
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #container {
-height: 340px;
-width: 540px;
-padding: 16px;
-border: blue solid 2px;
-display: flex;
-background-color: black;
+  width: 520px;
+  height: 510px;
+  background-color: skyblue;
+  border: blue solid 2px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#container > div {
+  display: flex;
+  border: 1px solid gray;
+  flex: 1 1 auto;
+  width: 30px;
+  height: 30px;
 }
