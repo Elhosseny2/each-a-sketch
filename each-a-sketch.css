@@ -8,6 +8,8 @@ align-items: center;
 border: black solid 1px;
 background-color: red;
 display: flex;
+height: 20px;
+width:20px;
 }
 
 #container {
