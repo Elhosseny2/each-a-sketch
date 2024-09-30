@@ -1,7 +1,7 @@
 let container = document.querySelector("#container");
 let randomBtn = document.querySelector("#rainbow");
 let blackBtn = document.querySelector("#black");
-let resetBtn = document.querySelector("#reset");
+let eraseBtn = document.querySelector("#erase");
 
 function makeGrid(row, culms) {
   for (let i = 0; i < row * culms; i++) {
@@ -49,7 +49,7 @@ function resetGrid (){
     }
 });
 }
-resetBtn.addEventListener("click", () => {
+eraseBtn.addEventListener("click", () => {
 resetGrid()
 })
 // const grids = document.querySelectorAll(".grid");
