@@ -1,4 +1,6 @@
 let container = document.querySelector("#container");
+let randomBtn = document.querySelector("#rainbow");
+let blackBtn = document.querySelector("#black");
 
 function makeGrid(row, culms) {
   for (let i = 0; i < row * culms; i++) {
@@ -10,14 +12,40 @@ function makeGrid(row, culms) {
 makeGrid(16, 16);
 
 
+let grids = document.querySelectorAll(".grid");
 
-// document.getElementById('bar').onmouseover = function() {
-//     this.style.color = '#' + Math.floor(Math.random() * 16777215).toString(16);
-//   };
+function blackColorGrid (){
+grids.forEach(grid => {
+  grid.onmouseover = function(){
+    this.style.backgroundColor="black"
+  }
+})
+}
 
-// const random = document.querySelector(".grid").onmouseover = function() {
+blackBtn.addEventListener("click", () => {
+blackColorGrid()
+});
+document.getElementById("bar").onmouseover = function () {
+  this.style.color = "black";
+};
+
+function randomColorGrid() {
+  grids.forEach(grid => {
+    grid.onmouseover = function() {
+      this.style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    };
+  });
+}
+
+randomBtn.addEventListener("click" , () => {
+  randomColorGrid()
+  });
+// const grids = document.querySelectorAll(".grid");
+// grids.forEach(grid => {
+//   grid.onmouseover = function() {
 //     this.style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
 //   };
+// });
 
 // function makeCulms(culms ) {
 //     for (i = 0; i < (culms * 16); i++) {
