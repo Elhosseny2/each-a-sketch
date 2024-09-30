@@ -4,10 +4,20 @@ function makeGrid(row, culms) {
   for (let i = 0; i < row * culms; i++) {
     let grid = document.createElement("div");
     container.appendChild(grid).className = "grid";
-    grid.textContent = "";
+    // grid.textContent = "";
   }
 }
 makeGrid(16, 16);
+
+
+
+// document.getElementById('bar').onmouseover = function() {
+//     this.style.color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+//   };
+
+// const random = document.querySelector(".grid").onmouseover = function() {
+//     this.style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+//   };
 
 // function makeCulms(culms ) {
 //     for (i = 0; i < (culms * 16); i++) {

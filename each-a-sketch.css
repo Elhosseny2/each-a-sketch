@@ -8,7 +8,7 @@ body {
 #container {
   width: 520px;
   height: 510px;
-  background-color: skyblue;
+  /* background-color: skyblue; */
   border: blue solid 2px;
   display: flex;
   flex-wrap: wrap;
@@ -20,3 +20,6 @@ body {
   width: 30px;
   height: 30px;
 }
+/* .grid:hover {
+    background-color: red;
+  } */
