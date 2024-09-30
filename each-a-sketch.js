@@ -11,35 +11,36 @@ function makeGrid(row, culms) {
 }
 makeGrid(16, 16);
 
-
 let grids = document.querySelectorAll(".grid");
 
-function blackColorGrid (){
-grids.forEach(grid => {
-  grid.onmouseover = function(){
-    this.style.backgroundColor="black"
-  }
-})
+function blackF() {
+  this.style.backgroundColor = "black";
 }
 
+function blackColorGrid() {
+  grids.forEach((grid) => {
+    grid.onmouseover = blackF;
+  });
+}
 blackBtn.addEventListener("click", () => {
-blackColorGrid()
+  blackColorGrid();
 });
 document.getElementById("bar").onmouseover = function () {
   this.style.color = "black";
 };
 
 function randomColorGrid() {
-  grids.forEach(grid => {
-    grid.onmouseover = function() {
-      this.style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+  grids.forEach((grid) => {
+    grid.onmouseover = function () {
+      this.style.backgroundColor =
+        "#" + Math.floor(Math.random() * 16777215).toString(16);
     };
   });
 }
 
-randomBtn.addEventListener("click" , () => {
-  randomColorGrid()
-  });
+randomBtn.addEventListener("click", () => {
+  randomColorGrid();
+});
 // const grids = document.querySelectorAll(".grid");
 // grids.forEach(grid => {
 //   grid.onmouseover = function() {
