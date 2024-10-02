@@ -2,6 +2,7 @@ let container = document.querySelector("#container");
 let randomBtn = document.querySelector("#rainbow");
 let blackBtn = document.querySelector("#black");
 let eraseBtn = document.querySelector("#erase");
+let resetBtn = document.querySelector("#reset");
 
 function makeGrid(row, culms) {
   for (let i = 0; i < row * culms; i++) {
@@ -42,16 +43,29 @@ randomBtn.addEventListener("click", () => {
   randomColorGrid();
 });
 
-function resetGrid (){
+function eraseGrid() {
   grids.forEach((grid) => {
     grid.onmouseover = function () {
-    this.style.backgroundColor ="transparent"
-    }
-});
+      this.style.backgroundColor = "transparent";
+    };
+  });
 }
 eraseBtn.addEventListener("click", () => {
-resetGrid()
-})
+  eraseGrid();
+});
+
+// function resetGrid() {
+//   grids.forEach((grid) => {
+//     grid.onmouseover = function () {
+//       this.style.backgroundColor = "transparent";
+//     };
+//   });
+// }
+// resetBtn.addEventListener("click", function() {
+//   this.style.backgroundColor = "transparent";
+// });
+
+
 // const grids = document.querySelectorAll(".grid");
 // grids.forEach(grid => {
 //   grid.onmouseover = function() {

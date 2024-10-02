@@ -19,6 +19,7 @@ body {
   flex: 1 1 auto;
   width: 30px;
   height: 30px;
+  flex-wrap: wrap;
 }
 /* .grid:hover {
     background-color: red;
