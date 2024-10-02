@@ -2,16 +2,22 @@ let container = document.querySelector("#container");
 let randomBtn = document.querySelector("#rainbow");
 let blackBtn = document.querySelector("#black");
 let eraseBtn = document.querySelector("#erase");
+let startBtn = document.querySelector("#start");
 // let resetBtn = document.querySelector("#reset");
+let total;
 
-function makeGrid(row, culms) {
-  for (let i = 0; i < row * culms; i++) {
-    let grid = document.createElement("div");
-    container.appendChild(grid).className = "grid";
-    // grid.textContent = "";
-  }
+startBtn.addEventListener("click", function () {
+  let total = prompt ("Enter the number of Squares you would")
+if (isNaN(total)){
+  alert ("invalid input, please put a valid Number")
 }
-makeGrid(16, 16);
+for (let i = 0; i < (total * total); i++) {
+  let grid = document.createElement("div");
+  container.appendChild(grid).className = "grid";
+  // grid.textContent = "";
+}
+makeGrid(total);
+});
 
 let grids = document.querySelectorAll(".grid");
 
@@ -64,7 +70,6 @@ eraseBtn.addEventListener("click", () => {
 // resetBtn.addEventListener("click", function() {
 //   this.style.backgroundColor = "transparent";
 // });
-
 
 // const grids = document.querySelectorAll(".grid");
 // grids.forEach(grid => {
