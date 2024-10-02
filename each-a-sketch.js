@@ -2,7 +2,7 @@ let container = document.querySelector("#container");
 let randomBtn = document.querySelector("#rainbow");
 let blackBtn = document.querySelector("#black");
 let eraseBtn = document.querySelector("#erase");
-let resetBtn = document.querySelector("#reset");
+// let resetBtn = document.querySelector("#reset");
 
 function makeGrid(row, culms) {
   for (let i = 0; i < row * culms; i++) {
