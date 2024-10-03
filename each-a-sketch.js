@@ -19,10 +19,16 @@ startBtn.addEventListener("click", function () {
 else if (isNaN(total)) {
   alert("invalid input, please put a valid Number (Maximum 100)");
   container.innerHTML = "";
+  let paragraph1= document.createElement("p")
+  paragraph1.textContent="It appears that an invalid input was provided. Please try again by clicking the 'New Grid' button to proceed."
+  container.appendChild(paragraph1)
 }
 else if (total < 0 || total > 100 ) {
   alert("Try again, Number should be between 1 and 100")
   container.innerHTML = "";
+  let paragraph2 = document.createElement("p")
+  paragraph2.textContent="Your input seems a bit off! Please enter a number between 1 and 100 and give it another go."
+  container.appendChild(paragraph2)
 }
   makeGrid(total);
 });
