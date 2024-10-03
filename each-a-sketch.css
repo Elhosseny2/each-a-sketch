@@ -7,11 +7,12 @@ body {
 
 #container {
   width: 520px;
-  height: 510px;
+  /* height: 510px; */
   /* background-color: skyblue; */
-  border: blue solid 2px;
+  /* border: blue solid 2px; */
   display: flex;
   flex-wrap: wrap;
+  flex: 1 1 auto;
 }
 #container > div {
   display: flex;

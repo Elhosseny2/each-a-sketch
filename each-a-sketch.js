@@ -6,16 +6,24 @@ let startBtn = document.querySelector("#start");
 let resetBtn = document.querySelector("#reset");
 
 startBtn.addEventListener("click", function () {
-  let total = prompt("Enter the number of Squares you would (Maximum 16)");
-  if (isNaN(total)) {
-    alert("invalid input, please put a valid Number (Maximum 16)");
-  }
+  let total = prompt("Enter the number of Squares you would (Maximum 100)");
+  if (total > 0 && total <= 100) {
   container.innerHTML = "";
   for (let i = 0; i < total * total; i++) {
     let grid = document.createElement("div");
     container.appendChild(grid).className = "grid";
+    // total= Math.min(100,Math.max(0,total))
     // grid.textContent = "";
   }
+}
+else if (isNaN(total)) {
+  alert("invalid input, please put a valid Number (Maximum 100)");
+  container.innerHTML = "";
+}
+else if (total < 0 || total > 100 ) {
+  alert("Try again, Number should be between 1 and 100")
+  container.innerHTML = "";
+}
   makeGrid(total);
 });
 
