@@ -8,28 +8,26 @@ let resetBtn = document.querySelector("#reset");
 startBtn.addEventListener("click", function () {
   let total = prompt("Enter the number of Squares you would (Maximum 100)");
   if (total > 0 && total <= 100) {
-  container.innerHTML = "";
-  for (let i = 0; i < total * total; i++) {
-    let grid = document.createElement("div");
-    container.appendChild(grid).className = "grid";
-    // total= Math.min(100,Math.max(0,total))
-    // grid.textContent = "";
+    container.textContent = "";
+    for (let i = 0; i < total * total; i++) {
+      let grid = document.createElement("div");
+      container.appendChild(grid).className = "grid";
+    }
+  } else if (isNaN(total)) {
+    alert("invalid input, please put a valid Number (Maximum 100)");
+    container.textContent = "";
+    let paragraph1 = document.createElement("p");
+    paragraph1.textContent =
+      "It appears that an invalid input was provided. Please try again by clicking the 'New Grid' button to proceed.";
+    container.appendChild(paragraph1);
+  } else if (total < 0 || total > 100) {
+    alert("Try again, Number should be between 1 and 100");
+    container.textContent = "";
+    let paragraph2 = document.createElement("p");
+    paragraph2.textContent =
+      "Your input seems a bit off! Please enter a number between 1 and 100 and give it another go.";
+    container.appendChild(paragraph2);
   }
-}
-else if (isNaN(total)) {
-  alert("invalid input, please put a valid Number (Maximum 100)");
-  container.innerHTML = "";
-  let paragraph1= document.createElement("p")
-  paragraph1.textContent="It appears that an invalid input was provided. Please try again by clicking the 'New Grid' button to proceed."
-  container.appendChild(paragraph1)
-}
-else if (total < 0 || total > 100 ) {
-  alert("Try again, Number should be between 1 and 100")
-  container.innerHTML = "";
-  let paragraph2 = document.createElement("p")
-  paragraph2.textContent="Your input seems a bit off! Please enter a number between 1 and 100 and give it another go."
-  container.appendChild(paragraph2)
-}
   makeGrid(total);
 });
 
