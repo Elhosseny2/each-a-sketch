@@ -3,29 +3,28 @@ let randomBtn = document.querySelector("#rainbow");
 let blackBtn = document.querySelector("#black");
 let eraseBtn = document.querySelector("#erase");
 let startBtn = document.querySelector("#start");
-// let resetBtn = document.querySelector("#reset");
-let total;
+let resetBtn = document.querySelector("#reset");
 
 startBtn.addEventListener("click", function () {
-  let total = prompt ("Enter the number of Squares you would")
-if (isNaN(total)){
-  alert ("invalid input, please put a valid Number")
-}
-for (let i = 0; i < (total * total); i++) {
-  let grid = document.createElement("div");
-  container.appendChild(grid).className = "grid";
-  // grid.textContent = "";
-}
-makeGrid(total);
+  let total = prompt("Enter the number of Squares you would (Maximum 16)");
+  if (isNaN(total)) {
+    alert("invalid input, please put a valid Number (Maximum 16)");
+  }
+  container.innerHTML = "";
+  for (let i = 0; i < total * total; i++) {
+    let grid = document.createElement("div");
+    container.appendChild(grid).className = "grid";
+    // grid.textContent = "";
+  }
+  makeGrid(total);
 });
-
-let grids = document.querySelectorAll(".grid");
 
 function blackF() {
   this.style.backgroundColor = "black";
 }
 
 function blackColorGrid() {
+  let grids = document.querySelectorAll(".grid");
   grids.forEach((grid) => {
     grid.onmouseover = blackF;
   });
@@ -38,6 +37,7 @@ document.getElementById("bar").onmouseover = function () {
 };
 
 function randomColorGrid() {
+  let grids = document.querySelectorAll(".grid");
   grids.forEach((grid) => {
     grid.onmouseover = function () {
       this.style.backgroundColor =
@@ -50,6 +50,7 @@ randomBtn.addEventListener("click", () => {
 });
 
 function eraseGrid() {
+  let grids = document.querySelectorAll(".grid");
   grids.forEach((grid) => {
     grid.onmouseover = function () {
       this.style.backgroundColor = "transparent";
@@ -60,16 +61,14 @@ eraseBtn.addEventListener("click", () => {
   eraseGrid();
 });
 
-// function resetGrid() {
-//   grids.forEach((grid) => {
-//     grid.onmouseover = function () {
-//       this.style.backgroundColor = "transparent";
-//     };
-//   });
-// }
-// resetBtn.addEventListener("click", function() {
-//   this.style.backgroundColor = "transparent";
-// });
+//reset button to reset all grids's background at once.
+
+resetBtn.addEventListener("click", () => {
+  let grids = document.querySelectorAll(".grid");
+  grids.forEach((grid) => {
+    grid.style.backgroundColor = "transparent";
+  });
+});
 
 // const grids = document.querySelectorAll(".grid");
 // grids.forEach(grid => {
