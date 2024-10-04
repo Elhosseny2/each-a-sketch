@@ -12,7 +12,7 @@ startBtn.addEventListener("click", function () {
     container.textContent = "";
     for (let i = 0; i < total * total; i++) {
       let grid = document.createElement("div");
-      grid.style.width = `${gridSize}px`; 
+      grid.style.width = `${gridSize}px`;
       grid.style.height = `${gridSize}px`;
       container.appendChild(grid).className = "grid";
     }
@@ -31,7 +31,6 @@ startBtn.addEventListener("click", function () {
       "Your input seems a bit off! Please enter a number between 1 and 100 and give it another go.";
     container.appendChild(paragraph2);
   }
-  makeGrid(total);
 });
 
 function blackF() {
@@ -47,9 +46,6 @@ function blackColorGrid() {
 blackBtn.addEventListener("click", () => {
   blackColorGrid();
 });
-document.getElementById("bar").onmouseover = function () {
-  this.style.color = "black";
-};
 
 function randomColorGrid() {
   let grids = document.querySelectorAll(".grid");
@@ -84,4 +80,3 @@ resetBtn.addEventListener("click", () => {
     grid.style.backgroundColor = "transparent";
   });
 });
-
