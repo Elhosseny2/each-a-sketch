@@ -29,7 +29,7 @@ body {
 button {
   padding: 10px 15px;
   font-size: 1rem;
-  /* margin: 0 10px; */
+  margin: 0 1.5px;
   margin-bottom: 10px;
   background: sienna;
   color: white;
@@ -41,4 +41,27 @@ button {
 button:hover {
   transform: scale(1.1);
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+#container p {
+  font-size: 40px;
+  text-align: center;
+  color: #fff;
+}
+#keyframe {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px blue, 0 0 40px wheat,
+      0 0 50px blue, 0 0 60px blue, 0 0 70px blue;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px red, 0 0 40px blue, 0 0 50px blue,
+      0 0 60px blue, 0 0 70px blue, 0 0 80px blue;
+  }
 }
