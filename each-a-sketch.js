@@ -7,10 +7,13 @@ let resetBtn = document.querySelector("#reset");
 
 startBtn.addEventListener("click", function () {
   let total = prompt("Enter the number of Squares you would (Maximum 100)");
+  let gridSize = 560 / total;
   if (total > 0 && total <= 100) {
     container.textContent = "";
     for (let i = 0; i < total * total; i++) {
       let grid = document.createElement("div");
+      grid.style.width = `${gridSize}px`; 
+      grid.style.height = `${gridSize}px`;
       container.appendChild(grid).className = "grid";
     }
   } else if (isNaN(total)) {
