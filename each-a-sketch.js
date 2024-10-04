@@ -85,30 +85,3 @@ resetBtn.addEventListener("click", () => {
   });
 });
 
-// const grids = document.querySelectorAll(".grid");
-// grids.forEach(grid => {
-//   grid.onmouseover = function() {
-//     this.style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-//   };
-// });
-
-// function makeCulms(culms ) {
-//     for (i = 0; i < (culms * 16); i++) {
-//       let culms = document.createElement("div");
-//     //   let culms = document.createElement("div");
-//       container.appendChild(culms).className = "culms"
-//       culms.textContent=""
-//     }
-//   }
-//   makeCulms(1);
-
-//   let fMakeRow = makeRow()
-//   let fMakeCulms = makeCulms()
-
-//   function makeGrid (fMakeRow, fMakeCulms){
-//     for (i = 0; i < (fMakeRow * fMakeCulms); i++) {
-//         fMakeRow.textContent = "grid"
-//         fMakeCulms.textContent = "grid"
-//   }
-// }
-// makeGrid(fMakeRow,fMakeCulms)
